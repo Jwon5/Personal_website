@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default class Navbar extends Component {
   render() {
@@ -12,24 +12,19 @@ export default class Navbar extends Component {
             </Link>
           </div>
           <div className="row float-right">
-            <div className="collpase navbar-collapse float-right ">
-              <ul className="navbar-nav mr-auto float-right">
-                <li className="navbar-item">
-                  <Link to="/" className="nav-link">
-                    Exercises
-                  </Link>
-                </li>
-                <li className="navbar-item">
-                  <Link to="/create" className="nav-link">
-                    Create Exercise Log
-                  </Link>
-                </li>
-                <li className="navbar-item">
-                  <Link to="/user" className="nav-link">
-                    Create User
-                  </Link>
-                </li>
-              </ul>
+            <div className="collpase navbar-nav navbar-collapse float-right ">
+              <NavLink to="/" className="navbar-item nav-link">
+                Home
+              </NavLink>
+              <NavLink to="/about" className="navbar-item nav-link">
+                About
+              </NavLink>
+              <NavLink to="/portfolio" className="navbar-item nav-link">
+                Portfolio
+              </NavLink>
+              <NavLink to="/contact" className="navbar-item nav-link">
+                Contact
+              </NavLink>
             </div>
           </div>
         </div>
