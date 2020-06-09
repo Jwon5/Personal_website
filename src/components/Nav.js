@@ -1,34 +1,55 @@
 import React, { Component } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import Button from "@material-ui/core/Button";
+import styles from "../assets/jss/material-kit-react/views/componentsSections/navbarsStyle.js";
+import Header from "./Header/Header";
+import HeaderLinks from "./Header/HeaderLinks";
 
-export default class Navbar extends Component {
-  render() {
-    return (
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <div className="container">
-          <div className="row">
-            <Link to="/" className="navbar-brand">
-              John Won
-            </Link>
-          </div>
-          <div className="row float-right">
-            <div className="collpase navbar-nav navbar-collapse float-right ">
-              <NavLink to="/" className="navbar-item nav-link">
-                Home
-              </NavLink>
-              <NavLink to="/about" className="navbar-item nav-link">
-                About
-              </NavLink>
-              <NavLink to="/portfolio" className="navbar-item nav-link">
-                Portfolio
-              </NavLink>
-              <NavLink to="/contact" className="navbar-item nav-link">
-                Contact
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      </nav>
-    );
-  }
+const useStyles = makeStyles(styles);
+
+export default function Navigation() {
+  const classes = useStyles();
+  return (
+    <Header
+      brand="John Won"
+      color="transparent"
+      rightLinks={
+        <List className={classes.list}>
+          <ListItem className={classes.listItem}>
+            <Button
+              color="transparent"
+              className={classes.navLink}
+              aria-label="go to about page"
+              href="/about"
+            >
+              About
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              color="transparent"
+              className={classes.navLink}
+              aria-label="go to projects"
+              href="/projects"
+            >
+              Projects
+            </Button>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Button
+              color="transparent"
+              className={classes.navLink}
+              aria-label="go to contact page"
+              href="/contact"
+            >
+              Contact
+            </Button>
+          </ListItem>
+        </List>
+      }
+    />
+  );
 }
