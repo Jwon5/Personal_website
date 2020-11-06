@@ -107,7 +107,7 @@ const headerStyle = {
     backgroundColor: "transparent !important",
     boxShadow: "none",
     paddingTop: "25px",
-    color: "#FFFFFF",
+    color: "black",
   },
   dark: {
     color: "#FFFFFF",
