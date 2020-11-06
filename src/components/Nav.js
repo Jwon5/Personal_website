@@ -14,7 +14,8 @@ export default function Navigation() {
   return (
     <Header
       brand="John Won"
-      color="white"
+      color="transparent"
+      fixed
       changeColorOnScroll={{
         height: 200,
         color: "white",

@@ -15,6 +15,10 @@ export default function Home() {
         className={classes.container}
         style={{
           backgroundImage: "url(" + image + ")",
+          color: "white",
+          height: "100vh",
+          justifyContent: "center",
+          alignContent: "center",
         }}
       >
         <GridContainer justify="center">
@@ -23,7 +27,34 @@ export default function Home() {
               <h1
                 className={classes.title}
                 style={{
-                  color: "white",
+                  paddingTop: "30%",
+                }}
+              >
+                Material Kit React.
+              </h1>
+              <h3 className={classes.subtitle}>
+                A Badass Material-UI Kit based on Material Design.
+              </h3>
+            </div>
+          </GridItem>
+        </GridContainer>
+      </div>
+      <div
+        className={classes.container}
+        style={{
+          backgroundImage: "url(" + image + ")",
+          color: "white",
+          height: "100vh",
+          justifyContent: "center",
+          alignContent: "center",
+        }}
+      >
+        <GridContainer justify="center">
+          <GridItem>
+            <div className={classes.brand}>
+              <h1
+                className={classes.title}
+                style={{
                   paddingTop: "30%",
                 }}
               >
