@@ -15,53 +15,46 @@ export default function Navigation() {
     <Header
       brand="John Won"
       color="white"
+      changeColorOnScroll={{
+        height: 200,
+        color: "white",
+      }}
       rightLinks={
         <List className={classes.list}>
           <ListItem
             button
-            component={NavLink}
-            to="/"
             className={classes.listItem}
             activeClassName="Mui-selected"
             exact
           >
-            <Button color="black" className={classes.navLink} aria-label="Home Page">
+            <Button
+              href="/"
+              color="transparent"
+              target="_self"
+              className={classes.navLink}
+            >
               Home
             </Button>
           </ListItem>
 
-          <ListItem
-            className={classes.listItem}
-            button
-            component={NavLink}
-            to="/projects"
-            className={classes.listItem}
-            activeClassName="Mui-selected"
-            exact
-          >
+          <ListItem className={classes.listItem} activeClassName="Mui-selected" exact>
             <Button
+              href="/Projects"
               color="transparent"
+              target="_self"
               className={classes.navLink}
-              aria-label="go to projects"
             >
               Projects
             </Button>
           </ListItem>
-          <ListItem
-            className={classes.listItem}
-            button
-            component={NavLink}
-            to="/contact"
-            className={classes.listItem}
-            activeClassName="Mui-selected"
-            exact
-          >
+          <ListItem className={classes.listItem} activeClassName="Mui-selected" exact>
             <Button
+              href="/Contact"
               color="transparent"
+              target="_self"
               className={classes.navLink}
-              aria-label="go to contact page"
             >
-              Contact
+              contact
             </Button>
           </ListItem>
         </List>

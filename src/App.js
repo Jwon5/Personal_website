@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Nav from "./components/Nav.js";
 import Home from "./components/home.js";
-import contact from "./components/contact.js";
-import Project from "./components/project.js";
+import Projects from "./components/project.js";
 import Contact from "./components/contact.js";
 
 function App() {
@@ -13,15 +12,9 @@ function App() {
     <Router>
       <Nav />
       <Switch>
-        <Route path="/" exact component={Home}>
-          <Home />
-        </Route>
-        <Route path="/Projects" component={Project}>
-          <Project />
-        </Route>
-        <Route path="/contact" component={contact}>
-          <Contact />
-        </Route>
+        <Route path="/" exact component={Home} />
+        <Route path="/Projects" component={Projects} />
+        <Route path="/Contact" component={Contact} />
       </Switch>
     </Router>
   );
