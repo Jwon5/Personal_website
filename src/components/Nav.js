@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -15,19 +14,17 @@ export default function Navigation() {
     <Header
       brand="John Won"
       color="transparent"
+      style={{
+        fontWeight: "bold",
+      }}
       fixed
       changeColorOnScroll={{
-        height: 200,
+        height: 50,
         color: "white",
       }}
       rightLinks={
         <List className={classes.list}>
-          <ListItem
-            button
-            className={classes.listItem}
-            activeClassName="Mui-selected"
-            exact
-          >
+          <ListItem button className={classes.listItem}>
             <Button
               href="/"
               color="transparent"
@@ -38,7 +35,7 @@ export default function Navigation() {
             </Button>
           </ListItem>
 
-          <ListItem className={classes.listItem} activeClassName="Mui-selected" exact>
+          <ListItem className={classes.listItem}>
             <Button
               href="/Projects"
               color="transparent"
@@ -48,7 +45,7 @@ export default function Navigation() {
               Projects
             </Button>
           </ListItem>
-          <ListItem className={classes.listItem} activeClassName="Mui-selected" exact>
+          <ListItem className={classes.listItem}>
             <Button
               href="/Contact"
               color="transparent"

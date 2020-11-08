@@ -53,7 +53,8 @@ const headerStyle = {
   title: {
     ...defaultFont,
     lineHeight: "30px",
-    fontSize: "18px",
+    fontSize: "20px",
+
     borderRadius: "3px",
     textTransform: "none",
     color: "inherit",
