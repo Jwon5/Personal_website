@@ -19,6 +19,11 @@ export default function Home() {
     <div className={classes.section}>
       <div className={classes.container}>
         <GridContainer>
+          <GridItem>
+            <div className={classes.brand}>
+              <h1>Projects</h1>
+            </div>
+          </GridItem>
           <GridItem xs={12} sm={12} md={8} lg={6} justify="center">
             <div id="project_1" className={classes.cards}>
               <Card className={classes.root}>

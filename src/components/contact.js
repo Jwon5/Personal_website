@@ -1,23 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
-import Paper from "@material-ui/core/Paper";
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    height: 140,
-    width: 100,
-  },
-  control: {
-    padding: theme.spacing(2),
-  },
-}));
+import GridContainer from "./Grid/GridContainer.js";
+import GridItem from "./Grid/GridItem";
+import Button from "@material-ui/core/Button";
+import Icon from "@material-ui/core/Icon";
+import TextField from "@material-ui/core/TextField";
+import styles from "../assets/jss/material-kit-react/views/contactPage.js";
+
+const useStyles = makeStyles(styles);
 
 export default function Contact() {
   const [spacing, setSpacing] = React.useState(2);
@@ -28,41 +18,69 @@ export default function Contact() {
   };
 
   return (
-    <Grid container className={classes.root} spacing={2}>
-      <Grid item xs={12}>
-        <Grid container justify="center" spacing={spacing}>
-          {[0, 1, 2].map((value) => (
-            <Grid key={value} item>
-              <Paper className={classes.paper} />
-            </Grid>
-          ))}
-        </Grid>
-      </Grid>
-      <Grid item xs={12}>
-        <Paper className={classes.control}>
-          <Grid container>
-            <Grid item>
-              <FormLabel>spacing</FormLabel>
-              <RadioGroup
-                name="spacing"
-                aria-label="spacing"
-                value={spacing.toString()}
-                onChange={handleChange}
-                row
-              >
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                  <FormControlLabel
-                    key={value}
-                    value={value.toString()}
-                    control={<Radio />}
-                    label={value.toString()}
+    <div className={classes.section}>
+      <div className={classes.container}>
+        <div id="intro">
+          <GridContainer className={classes.padded}>
+            <GridItem>
+              <div className={classes.brand}>
+                <h1>Contact</h1>
+              </div>
+            </GridItem>
+            <GridItem className={classes.form}>
+              <form Validate autoComplete="on">
+                <div className={classes.spacing}>
+                  <TextField
+                    id="name"
+                    label="Full Name"
+                    placeholder="John Doe"
+                    fullWidth
+                    multiline
                   />
-                ))}
-              </RadioGroup>
-            </Grid>
-          </Grid>
-        </Paper>
-      </Grid>
-    </Grid>
+                </div>
+                <div className={classes.spacing}>
+                  <TextField
+                    id="email"
+                    label="Email"
+                    placeholder="Example@example.com"
+                    fullWidth
+                    multiline
+                  />
+                </div>
+                <div className={classes.spacing}>
+                  <TextField
+                    id="topic"
+                    label="Topic"
+                    placeholder="Talking?"
+                    fullWidth
+                    multiline
+                  />
+                </div>
+                <div className={classes.spacing2}>
+                  <TextField
+                    id="message"
+                    label="Message"
+                    multiline
+                    fullWidth
+                    rows={4}
+                    variant="outlined"
+                  />
+                </div>
+                <div>
+                  <Button
+                    variant="contained"
+                    color="default"
+                    className={classes.button}
+                    endIcon={<Icon>send</Icon>}
+                  >
+                    Send
+                  </Button>
+                </div>
+              </form>
+            </GridItem>
+          </GridContainer>
+        </div>
+      </div>
+    </div>
   );
 }

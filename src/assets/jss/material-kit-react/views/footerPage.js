@@ -6,6 +6,9 @@ const footerPage = {
     display: "inline-block",
     textDecoration: "none",
   },
+  spacing: {
+    padding: "0",
+  },
   copyRight: {
     fontSize: "1em",
     fontWeight: "200",

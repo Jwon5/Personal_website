@@ -19,7 +19,7 @@ export default function Home() {
       <div className={classes.container}>
         <div id="footer">
           <GridContainer justify="center">
-            <ul>
+            <ul className={classes.spacing}>
               <li className={classes.socialIcon}>
                 <a
                   href="https://github.com/Jwon5"

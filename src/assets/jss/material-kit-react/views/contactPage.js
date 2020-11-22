@@ -2,21 +2,28 @@ import { container, title } from "../material-kit-react.js";
 
 const projectPage = {
   container,
-  section: {
+  form: {
+    margin: "auto",
+    maxWidth: "400px",
+  },
+  brand: {
+    color: "black",
+    letterSpacing: "2px",
+  },
+  padded: {
     paddingTop: "10em",
-    maxWidth: "345",
     paddingBottom: "10em",
   },
-
-  description: {
-    margin: "1.071rem auto 0",
-    maxWidth: "600px",
-    color: "#999",
-    textAlign: "center !important",
+  button: {
+    marginTop: "10px",
+    color: "white",
+    background: "black",
   },
-  cards: {
-    paddingTop: "20px",
-    paddingBottom: "20px",
+  spacing: {
+    paddingTop: "15px",
+  },
+  spacing2: {
+    paddingTop: "25px",
   },
   main: {
     background: "#FFFFFF",
