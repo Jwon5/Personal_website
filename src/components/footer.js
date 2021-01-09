@@ -19,6 +19,7 @@ export default function Home() {
       <div className={classes.container}>
         <div id="footer">
           <GridContainer justify="center">
+            {/* social icons */}
             <ul className={classes.spacing}>
               <li className={classes.socialIcon}>
                 <a
@@ -48,6 +49,7 @@ export default function Home() {
           </GridContainer>
           <Divider />
           <GridContainer justify="center">
+            {/* copyright stuff */}
             <div className={classes.copyRight}>
               <p>©2020 John Won. All Rights Reserved.</p>
             </div>

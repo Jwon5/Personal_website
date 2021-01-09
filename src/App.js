@@ -7,6 +7,7 @@ import Home from "./components/home.js";
 import Projects from "./components/project.js";
 import Contact from "./components/contact.js";
 import Footer from "./components/footer.js";
+import { container } from "./assets/jss/material-kit-react/material-kit-react";
 
 function App() {
   return (

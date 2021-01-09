@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "./Grid/GridContainer.js";
 import GridItem from "./Grid/GridItem";
 import styles from "../assets/jss/material-kit-react/views/homePage.js";
-import image from "../assets/img/BG-2.jpeg";
+import image from "../assets/img/ana.jpg";
 
 import faceImage from "../assets/img/faces/empty.jpg";
 
@@ -13,13 +13,14 @@ export default function Home() {
   const classes = useStyles();
   return (
     <div className={classes.main}>
+      {/* Top background and name */}
       <div
         className={classes.section}
         style={{
           backgroundImage: "url(" + image + ")",
           backgroundPosition: "center",
           color: "white",
-          height: "100vh",
+          height: "50vh",
         }}
       >
         <div className={classes.container}>
@@ -30,8 +31,8 @@ export default function Home() {
                   <h1
                     className={classes.title}
                     style={{
-                      paddingTop: "30%",
-                      color: "black",
+                      paddingTop: "10%",
+                      color: "white",
                       letterSpacing: "2px",
                     }}
                   >
@@ -40,20 +41,16 @@ export default function Home() {
                   <p
                     className={classes.subtitle}
                     style={{
-                      color: "black",
+                      color: "White",
                     }}
-                  >
-                    I am a creative and highly self-motivated computer science graduate
-                    specialized in mobile and web development seeking a full-time position
-                    where I can utilize my skill set to assist in developing innovative
-                    tools and software.
-                  </p>
+                  ></p>
                 </div>
               </GridItem>
             </GridContainer>
           </div>
         </div>
       </div>
+      {/* About me section */}
       <div
         className={classes.section}
         style={{
@@ -104,6 +101,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* SKILLS SECTION BABYYYYYY */}
       <div
         className={classes.section}
         style={{
