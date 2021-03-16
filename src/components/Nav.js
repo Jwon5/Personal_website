@@ -34,7 +34,16 @@ export default function Navigation() {
               Home
             </Button>
           </ListItem>
-
+          <ListItem button className={classes.listItem}>
+            <Button
+              href="/About"
+              color="transparent"
+              target="_self"
+              className={classes.navLink}
+            >
+              About
+            </Button>
+          </ListItem>
           <ListItem className={classes.listItem}>
             <Button
               href="/Projects"

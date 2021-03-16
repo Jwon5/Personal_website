@@ -25,7 +25,7 @@ const homePage = {
     margin: "10px 0 0",
   },
   para: {
-    fontSize: "1.2em",
+    fontSize: "1.1em",
     fontWeight: "200",
     margin: "10px 0 0",
   },
@@ -49,6 +49,20 @@ const homePage = {
   },
   marginAuto: {
     margin: "auto !important",
+    textAlign: "center !important",
+  },
+  imgFluid: {
+    maxWidth: "50%",
+    height: "auto",
+  },
+  imgRounded: {
+    borderRadius: "6px !important",
+  },
+  imgRoundedCircle: {
+    borderRadius: "50% !important",
+  },
+  imgRaised: {
+    boxShadow: "0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
   },
 };
 

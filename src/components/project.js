@@ -9,6 +9,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import GridContainer from "./Grid/GridContainer.js";
 import GridItem from "./Grid/GridItem";
+import Footer from "../components/footer.js";
 import styles from "../assets/jss/material-kit-react/views/projectPage.js";
 
 const useStyles = makeStyles(styles);
@@ -82,6 +83,7 @@ export default function Home() {
           </GridItem>
         </GridContainer>
       </div>
+      <Footer />
     </div>
   );
 }

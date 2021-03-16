@@ -3,24 +3,26 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "./Grid/GridContainer.js";
 import GridItem from "./Grid/GridItem";
 import styles from "../assets/jss/material-kit-react/views/homePage.js";
-import image from "../assets/img/ana.jpg";
-
-import faceImage from "../assets/img/faces/empty.jpg";
+import Footer from "../components/footer.js";
 
 const useStyles = makeStyles(styles);
 
 export default function Home() {
   const classes = useStyles();
   return (
-    <div className={classes.main}>
+    <div
+      className={classes.main}
+      style={{
+        backgroundColor: "#557A95",
+        height: "100vh",
+      }}
+    >
       {/* Top background and name */}
       <div
         className={classes.section}
         style={{
-          backgroundImage: "url(" + image + ")",
-          backgroundPosition: "center",
-          color: "white",
-          height: "50vh",
+          color: "#5D5C61",
+          height: "85vh",
         }}
       >
         <div className={classes.container}>
@@ -31,69 +33,21 @@ export default function Home() {
                   <h1
                     className={classes.title}
                     style={{
-                      paddingTop: "10%",
-                      color: "white",
+                      paddingTop: "15%",
+                      color: "#062525 ",
                       letterSpacing: "2px",
                     }}
                   >
-                    John Won
+                    Hello, I'm John Won.
                   </h1>
                   <p
                     className={classes.subtitle}
                     style={{
-                      color: "White",
-                    }}
-                  ></p>
-                </div>
-              </GridItem>
-            </GridContainer>
-          </div>
-        </div>
-      </div>
-      {/* About me section */}
-      <div
-        className={classes.section}
-        style={{
-          background: "#121212",
-          justifyContent: "center",
-          alignContent: "center",
-          paddingTop: "5%",
-          paddingBottom: "5%",
-        }}
-      >
-        <div className={classes.container}>
-          <div id="about">
-            <GridContainer justify="center">
-              <GridItem sm={12} md={6} className={classes.marginAuto}>
-                <img
-                  src={faceImage}
-                  alt="Image of my Face"
-                  className={
-                    classes.imgRaised +
-                    " " +
-                    classes.imgRoundedCircle +
-                    " " +
-                    classes.imgFluid
-                  }
-                />
-              </GridItem>
-              <GridItem sm={12} md={6}>
-                <div className={classes.brand}>
-                  <h2
-                    className={classes.title2}
-                    style={{
-                      letterSpacing: "2px",
+                      color: "#010808",
                     }}
                   >
-                    About Me
-                  </h2>
-                  <p className={classes.para}>
-                    I am a recent graduate with a Computer Science degree at University of
-                    North Carolina at Charlotte. I'm just a curious person in which I try
-                    to explore everything. As a child I would try to break things apart to
-                    learn how to put it back together. Learning how to code is a similar
-                    feeling. I learn how to break code up to understand which parts do
-                    which. I created this website using React.js and Material UI.
+                    I am an advid developer and a coffee addict that yerns to learn to
+                    create with modern technologies.
                   </p>
                 </div>
               </GridItem>
@@ -101,42 +55,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* SKILLS SECTION BABYYYYYY */}
-      <div
-        className={classes.section}
-        style={{
-          background: "white",
-          color: "black",
-          justifyContent: "center",
-          alignContent: "center",
-        }}
-      >
-        <div className={classes.container}>
-          <div id="skills">
-            <GridContainer>
-              <GridItem xs={12} sm={12} md={8} lg={6}>
-                <div className={classes.brand}>
-                  <h1
-                    className={classes.title2}
-                    style={{
-                      color: "black",
-                      letterSpacing: "2px",
-                    }}
-                  >
-                    Skills
-                  </h1>
-                  <h3
-                    className={classes.subtitle}
-                    style={{
-                      color: "black",
-                    }}
-                  ></h3>
-                </div>
-              </GridItem>
-            </GridContainer>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

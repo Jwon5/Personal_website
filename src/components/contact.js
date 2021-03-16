@@ -12,6 +12,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import styles from "../assets/jss/material-kit-react/views/contactPage.js";
+import Footer from "../components/footer.js";
 
 const useStyles = makeStyles(styles);
 
@@ -145,6 +146,7 @@ export default function Contact() {
           </GridContainer>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

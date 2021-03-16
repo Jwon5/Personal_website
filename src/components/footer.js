@@ -10,12 +10,7 @@ const useStyles = makeStyles(styles);
 export default function Home() {
   const classes = useStyles();
   return (
-    <div
-      className={classes.section}
-      style={{
-        padding: "10px",
-      }}
-    >
+    <div className={classes.section}>
       <div className={classes.container}>
         <div id="footer">
           <GridContainer justify="center">
@@ -51,7 +46,7 @@ export default function Home() {
           <GridContainer justify="center">
             {/* copyright stuff */}
             <div className={classes.copyRight}>
-              <p>©2020 John Won. All Rights Reserved.</p>
+              <p>&copy; 2021 John Won. All Rights Reserved.</p>
             </div>
           </GridContainer>
         </div>
